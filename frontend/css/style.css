@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #eee;
+
+    overflow: hidden;
+}
+
+
+/* ========================================
+   Application
+   ======================================== */
+
+.app {
+    display: flex;
+
+    flex-direction: row;
+
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* ========================================
+   Map
+   ======================================== */
+
+.map-container {
+    flex: 1 1 auto;
+
+    min-width: 0;
+    min-height: 0;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    overflow: hidden;
+}
+
+
+#map {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+#map svg {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-width: 1000px;
+    max-height: 100%;
+
+    background: white;
+
+    border: 1px solid #ccc;
+}
+
+
+/* ========================================
+   Sidebar
+   ======================================== */
+
+.sidebar {
+    flex: 0 0 320px;
+
+    width: 320px;
+    height: 100%;
+
+    background: white;
+
+    border-left: 1px solid #ccc;
+
+    overflow-y: auto;
+
+    order: 2;
+}
+
+
+.sidebar-content {
+    padding: 24px;
+}
+
+
+.sidebar-content h2 {
+    margin: 0 0 24px 0;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.entity-type {
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+    padding: 4px 8px;
+
+    border-radius: 4px;
+
+    background: #f0f0f0;
+
+    color: #666;
+
+    font-size: 12px;
+}
+
+
+.info-row {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eee;
+
+    font-size: 14px;
+}
+
+
+.info-row span {
+    color: #777;
+}
+
+
+.info-row strong {
+    color: #222;
+}
+
+
+/* ========================================
+   SVG elements
+   ======================================== */
+
+.scanner-marker,
+.tag-marker {
+    cursor: pointer;
+}
+
+
+.tag-marker {
+    pointer-events: auto;
+}
